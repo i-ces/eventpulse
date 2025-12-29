@@ -1,0 +1,38 @@
+/* ==========================================================================
+   PAGES.CSS - Page-Specific Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Index Page (Events Listing)
+   -------------------------------------------------------------------------- */
+
+/* Filter section mobile toggle - hidden on desktop */
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-md);
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-md);
+}
+
+.filter-toggle-text {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+}
+
+@media (min-width: 1024px) {
+  .filter-toggle {
+    display: none;
+  }
+}
+
+/* Events count */
+.events-count {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
