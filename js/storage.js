@@ -19,3 +19,24 @@ function saveStateToLocalStorage(state) {
     console.error('Error saving state to localStorage:', error);
   }
 }
+
+/**
+ * Loads the application state from localStorage
+ * @returns {Object|null} The saved state object or null if not found
+ */
+function loadStateFromLocalStorage() {
+  try {
+    // Retrieve and parse stored state
+    const serializedState = localStorage.getItem(STORAGE_KEY);
+    
+    // Return null if no state exists
+    if (serializedState === null) {
+      return null;
+    }
+    
+    return JSON.parse(serializedState);
+  } catch (error) {
+    console.error('Error loading state from localStorage:', error);
+    return null;
+  }
+}
