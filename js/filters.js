@@ -68,3 +68,24 @@ function filterByLocation(eventsArray, location) {
     event.location.toLowerCase().includes(location.toLowerCase())
   );
 }
+
+/**
+ * Searches events by title and description
+ * @param {Array} eventsArray - Array of events to search
+ * @param {string} query - Search query
+ * @returns {Array} Filtered array of events matching the search
+ */
+function searchEvents(eventsArray, query) {
+  if (!query || query.trim() === '') {
+    return eventsArray;
+  }
+  
+  const searchTerm = query.toLowerCase().trim();
+  
+  return eventsArray.filter(event => 
+    event.title.toLowerCase().includes(searchTerm) ||
+    event.description.toLowerCase().includes(searchTerm) ||
+    event.location.toLowerCase().includes(searchTerm) ||
+    event.category.toLowerCase().includes(searchTerm)
+  );
+}
