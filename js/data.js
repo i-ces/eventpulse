@@ -71,5 +71,27 @@ const events = [
     image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=225&fit=crop",
     description: "Connect with entrepreneurs and investors at this premier business event.",
     isSaved: false
+  },
+  {
+    id: "evt-007",
+    title: "Jazz Under the Stars",
+    date: "2025-07-18",
+    time: "20:00",
+    location: "Los Angeles",
+    category: "music",
+    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=225&fit=crop",
+    description: "An enchanting evening of jazz music under the open sky.",
+    isSaved: false
+  },
+  {
+    id: "evt-008",
+    title: "Full-Stack Development Workshop",
+    date: "2025-08-30",
+    time: "09:00",
+    location: "Seattle",
+    category: "tech",
+    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400&h=225&fit=crop",
+    description: "Hands-on workshop covering modern web development technologies.",
+    isSaved: false
   }
 ];
