@@ -130,3 +130,22 @@ function setupEventListeners() {
     savedToggle.addEventListener('change', handleSavedToggle);
   }
 }
+
+/**
+ * Initializes the application
+ */
+function initApp() {
+  // Initialize state from localStorage or default events
+  appState.events = initializeState();
+  
+  // Set up event listeners
+  setupEventListeners();
+  
+  // Initial render
+  refreshEventsDisplay();
+  
+  console.log('EventPulse app initialized');
+}
+
+// Initialize app when DOM is ready
+document.addEventListener('DOMContentLoaded', initApp);
