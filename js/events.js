@@ -41,3 +41,21 @@ function refreshEventsDisplay() {
   const filteredEvents = applyFilters(appState.events, appState.filters);
   renderEvents(filteredEvents);
 }
+
+/**
+ * Handles save button clicks using event delegation
+ * @param {Event} event - The click event
+ */
+function handleSaveButtonClick(event) {
+  const saveButton = event.target.closest('.btn--save');
+  
+  if (!saveButton) return;
+  
+  event.preventDefault();
+  
+  const eventId = saveButton.dataset.eventId;
+  
+  if (eventId) {
+    toggleSaveEvent(eventId);
+  }
+}
