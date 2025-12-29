@@ -36,3 +36,29 @@ function createEventCard(event) {
     </article>
   `;
 }
+
+/**
+ * Renders all events to the events grid container
+ * @param {Array} eventsArray - Array of event objects to render
+ */
+function renderEvents(eventsArray) {
+  const eventsGrid = document.querySelector('.events-grid');
+  
+  if (!eventsGrid) {
+    console.error('Events grid container not found');
+    return;
+  }
+  
+  // Clear existing content
+  eventsGrid.innerHTML = '';
+  
+  // Show message if no events
+  if (eventsArray.length === 0) {
+    eventsGrid.innerHTML = '<p class="no-events">No events found matching your criteria.</p>';
+    return;
+  }
+  
+  // Render each event card
+  const cardsHTML = eventsArray.map(event => createEventCard(event)).join('');
+  eventsGrid.innerHTML = cardsHTML;
+}
