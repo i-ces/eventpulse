@@ -106,4 +106,60 @@
   }
 }
 
+/* --------------------------------------------------------------------------
+   Main Content Layout with Sidebar
+   -------------------------------------------------------------------------- */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-2xl);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 100%;
+}
+
+.sidebar-section {
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar-section + .sidebar-section {
+  margin-top: var(--space-md);
+}
+
+.sidebar-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+}
+
+/* Desktop layout with sidebar */
+@media (min-width: 1024px) {
+  .main-layout {
+    flex-direction: row;
+    gap: var(--space-xl);
+    padding-top: var(--space-xl);
+  }
+
+  .sidebar {
+    width: 280px;
+    flex-shrink: 0;
+  }
+}
+
+
 
