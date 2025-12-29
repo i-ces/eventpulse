@@ -49,5 +49,16 @@ const events = [
     image: "https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?w=400&h=225&fit=crop",
     description: "Run through the heart of the city in this annual marathon event.",
     isSaved: false
+  },
+  {
+    id: "evt-005",
+    title: "Modern Art Exhibition: New Horizons",
+    date: "2025-05-12",
+    time: "10:00",
+    location: "New York",
+    category: "arts",
+    image: "https://images.unsplash.com/photo-1499364615650-ec38552f4f34?w=400&h=225&fit=crop",
+    description: "Experience contemporary art from emerging and established artists.",
+    isSaved: false
   }
 ];
