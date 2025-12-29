@@ -40,3 +40,34 @@ function loadStateFromLocalStorage() {
     return null;
   }
 }
+
+/**
+ * Clears all EventPulse data from localStorage
+ */
+function clearStorage() {
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+  } catch (error) {
+    console.error('Error clearing localStorage:', error);
+  }
+}
+
+/**
+ * Initializes state from localStorage or returns default events
+ * @returns {Array} Array of events with persisted saved states
+ */
+function initializeState() {
+  // Try to load saved state from localStorage
+  const savedState = loadStateFromLocalStorage();
+  
+  if (savedState && savedState.events) {
+    // Merge saved states with default events (in case new events were added)
+    return events.map(event => {
+      const savedEvent = savedState.events.find(e => e.id === event.id);
+      return savedEvent ? { ...event, isSaved: savedEvent.isSaved } : event;
+    });
+  }
+  
+  // Return default events if no saved state exists
+  return [...events];
+}
