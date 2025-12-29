@@ -38,5 +38,16 @@ const events = [
     image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=225&fit=crop",
     description: "Savor exquisite cuisines and wines from around the world.",
     isSaved: false
+  },
+  {
+    id: "evt-004",
+    title: "City Marathon 2025",
+    date: "2025-04-05",
+    time: "07:00",
+    location: "Chicago",
+    category: "sports",
+    image: "https://images.unsplash.com/photo-1513593771513-7b58b6c4af38?w=400&h=225&fit=crop",
+    description: "Run through the heart of the city in this annual marathon event.",
+    isSaved: false
   }
 ];
