@@ -85,15 +85,11 @@ function updateSaveButton(eventId, isSaved) {
   
   if (!button) return;
   
-  const icon = button.querySelector('.save-icon');
-  
   if (isSaved) {
     button.classList.add('saved');
-    icon.textContent = '♥';
-    button.innerHTML = `<span class="save-icon">♥</span> Saved`;
+    button.textContent = 'Saved';
   } else {
     button.classList.remove('saved');
-    icon.textContent = '♡';
-    button.innerHTML = `<span class="save-icon">♡</span> Save`;
+    button.textContent = 'Save Event';
   }
 }
