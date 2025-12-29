@@ -62,3 +62,26 @@ function renderEvents(eventsArray) {
   const cardsHTML = eventsArray.map(event => createEventCard(event)).join('');
   eventsGrid.innerHTML = cardsHTML;
 }
+
+/**
+ * Updates the save button appearance for a specific event
+ * @param {string} eventId - The ID of the event
+ * @param {boolean} isSaved - Whether the event is saved
+ */
+function updateSaveButton(eventId, isSaved) {
+  const button = document.querySelector(`[data-event-id="${eventId}"]`);
+  
+  if (!button) return;
+  
+  const icon = button.querySelector('.save-icon');
+  
+  if (isSaved) {
+    button.classList.add('saved');
+    icon.textContent = '♥';
+    button.innerHTML = `<span class="save-icon">♥</span> Saved`;
+  } else {
+    button.classList.remove('saved');
+    icon.textContent = '♡';
+    button.innerHTML = `<span class="save-icon">♡</span> Save`;
+  }
+}
