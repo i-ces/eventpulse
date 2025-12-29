@@ -95,3 +95,38 @@ function handleSavedToggle(event) {
   appState.filters.savedOnly = event.target.checked;
   refreshEventsDisplay();
 }
+
+/**
+ * Sets up all event listeners
+ */
+function setupEventListeners() {
+  // Event delegation for save buttons on the events grid
+  const eventsGrid = document.querySelector('.events-grid');
+  if (eventsGrid) {
+    eventsGrid.addEventListener('click', handleSaveButtonClick);
+  }
+  
+  // Category filter
+  const categoryFilter = document.getElementById('category-filter');
+  if (categoryFilter) {
+    categoryFilter.addEventListener('change', handleCategoryFilter);
+  }
+  
+  // Date filter
+  const dateFilter = document.getElementById('date-filter');
+  if (dateFilter) {
+    dateFilter.addEventListener('change', handleDateFilter);
+  }
+  
+  // Search input
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', handleSearch);
+  }
+  
+  // Saved events toggle
+  const savedToggle = document.getElementById('saved-toggle');
+  if (savedToggle) {
+    savedToggle.addEventListener('change', handleSavedToggle);
+  }
+}
