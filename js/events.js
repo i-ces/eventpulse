@@ -77,3 +77,12 @@ function handleDateFilter(event) {
   appState.filters.date = event.target.value;
   refreshEventsDisplay();
 }
+
+/**
+ * Handles search input
+ * @param {Event} event - The input event
+ */
+function handleSearch(event) {
+  appState.filters.search = event.target.value;
+  refreshEventsDisplay();
+}
