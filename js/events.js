@@ -68,3 +68,12 @@ function handleCategoryFilter(event) {
   appState.filters.category = event.target.value;
   refreshEventsDisplay();
 }
+
+/**
+ * Handles date filter changes
+ * @param {Event} event - The change event
+ */
+function handleDateFilter(event) {
+  appState.filters.date = event.target.value;
+  refreshEventsDisplay();
+}
