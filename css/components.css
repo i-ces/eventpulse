@@ -77,3 +77,53 @@
   padding: var(--space-md) var(--space-lg);
   font-size: var(--font-size-base);
 }
+
+/* --------------------------------------------------------------------------
+   Badges
+   -------------------------------------------------------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.badge-primary {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.badge-music {
+  background-color: #fce7f3;
+  color: #be185d;
+}
+
+.badge-tech {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badge-food {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.badge-sports {
+  background-color: #d1fae5;
+  color: #047857;
+}
+
+.badge-arts {
+  background-color: #ede9fe;
+  color: #6d28d9;
+}
+
+.badge-business {
+  background-color: #e0e7ff;
+  color: #4338ca;
+}
