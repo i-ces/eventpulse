@@ -47,7 +47,7 @@ function refreshEventsDisplay() {
  * @param {Event} event - The click event
  */
 function handleSaveButtonClick(event) {
-  const saveButton = event.target.closest('.btn--save');
+  const saveButton = event.target.closest('[data-event-id]');
   
   if (!saveButton) return;
   
