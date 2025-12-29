@@ -86,3 +86,12 @@ function handleSearch(event) {
   appState.filters.search = event.target.value;
   refreshEventsDisplay();
 }
+
+/**
+ * Handles saved events toggle
+ * @param {Event} event - The change event
+ */
+function handleSavedToggle(event) {
+  appState.filters.savedOnly = event.target.checked;
+  refreshEventsDisplay();
+}
