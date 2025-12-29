@@ -60,5 +60,16 @@ const events = [
     image: "https://images.unsplash.com/photo-1499364615650-ec38552f4f34?w=400&h=225&fit=crop",
     description: "Experience contemporary art from emerging and established artists.",
     isSaved: false
+  },
+  {
+    id: "evt-006",
+    title: "Startup Founders Summit",
+    date: "2025-06-22",
+    time: "08:30",
+    location: "Houston",
+    category: "business",
+    image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=225&fit=crop",
+    description: "Connect with entrepreneurs and investors at this premier business event.",
+    isSaved: false
   }
 ];
