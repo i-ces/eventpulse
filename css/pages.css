@@ -210,3 +210,11 @@
   width: 100%;
   margin-top: var(--space-md);
 }
+
+/* --------------------------------------------------------------------------
+   Event Details Page Container
+   -------------------------------------------------------------------------- */
+.event-page-container {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-2xl);
+}
