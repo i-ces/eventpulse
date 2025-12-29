@@ -178,3 +178,26 @@
 .back-link:hover {
   color: var(--color-primary);
 }
+
+/* --------------------------------------------------------------------------
+   Footer Enhancements
+   -------------------------------------------------------------------------- */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar Button Full Width
+   -------------------------------------------------------------------------- */
+.sidebar-btn {
+  width: 100%;
+  margin-top: var(--space-md);
+}
