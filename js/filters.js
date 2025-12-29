@@ -52,3 +52,19 @@ function filterByDate(eventsArray, dateFilter) {
     }
   });
 }
+
+/**
+ * Filters events by location
+ * @param {Array} eventsArray - Array of events to filter
+ * @param {string} location - Location to filter by (empty string for all)
+ * @returns {Array} Filtered array of events
+ */
+function filterByLocation(eventsArray, location) {
+  if (!location || location === 'all') {
+    return eventsArray;
+  }
+  
+  return eventsArray.filter(event => 
+    event.location.toLowerCase().includes(location.toLowerCase())
+  );
+}
