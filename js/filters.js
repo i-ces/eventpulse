@@ -103,3 +103,40 @@ function filterSavedEvents(eventsArray, savedOnly) {
   
   return eventsArray.filter(event => event.isSaved);
 }
+
+/**
+ * Applies all filters and search to events
+ * @param {Array} eventsArray - Array of events to filter
+ * @param {Object} filterOptions - Object containing filter options
+ * @returns {Array} Filtered array of events
+ */
+function applyFilters(eventsArray, filterOptions) {
+  let filtered = [...eventsArray];
+  
+  // Apply category filter
+  if (filterOptions.category) {
+    filtered = filterByCategory(filtered, filterOptions.category);
+  }
+  
+  // Apply date filter
+  if (filterOptions.date) {
+    filtered = filterByDate(filtered, filterOptions.date);
+  }
+  
+  // Apply location filter
+  if (filterOptions.location) {
+    filtered = filterByLocation(filtered, filterOptions.location);
+  }
+  
+  // Apply search
+  if (filterOptions.search) {
+    filtered = searchEvents(filtered, filterOptions.search);
+  }
+  
+  // Apply saved filter
+  if (filterOptions.savedOnly) {
+    filtered = filterSavedEvents(filtered, filterOptions.savedOnly);
+  }
+  
+  return filtered;
+}
