@@ -59,3 +59,12 @@ function handleSaveButtonClick(event) {
     toggleSaveEvent(eventId);
   }
 }
+
+/**
+ * Handles category filter changes
+ * @param {Event} event - The change event
+ */
+function handleCategoryFilter(event) {
+  appState.filters.category = event.target.value;
+  refreshEventsDisplay();
+}
