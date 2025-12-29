@@ -18,3 +18,37 @@ function filterByCategory(eventsArray, category) {
     event.category.toLowerCase() === category.toLowerCase()
   );
 }
+
+/**
+ * Filters events by date range
+ * @param {Array} eventsArray - Array of events to filter
+ * @param {string} dateFilter - Date filter type ('today', 'week', 'month', 'all')
+ * @returns {Array} Filtered array of events
+ */
+function filterByDate(eventsArray, dateFilter) {
+  if (!dateFilter || dateFilter === 'all') {
+    return eventsArray;
+  }
+  
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  
+  return eventsArray.filter(event => {
+    const eventDate = new Date(event.date);
+    eventDate.setHours(0, 0, 0, 0);
+    
+    const diffTime = eventDate.getTime() - today.getTime();
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+    switch (dateFilter) {
+      case 'today':
+        return diffDays === 0;
+      case 'week':
+        return diffDays >= 0 && diffDays <= 7;
+      case 'month':
+        return diffDays >= 0 && diffDays <= 30;
+      default:
+        return true;
+    }
+  });
+}
