@@ -33,3 +33,11 @@ function toggleSaveEvent(eventId) {
   // Persist to localStorage
   saveStateToLocalStorage({ events: appState.events });
 }
+
+/**
+ * Refreshes the events display based on current filters
+ */
+function refreshEventsDisplay() {
+  const filteredEvents = applyFilters(appState.events, appState.filters);
+  renderEvents(filteredEvents);
+}
