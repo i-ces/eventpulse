@@ -67,6 +67,18 @@
   outline-offset: 2px;
 }
 
+/* Saved Button State */
+.btn-outline.saved {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.btn-outline.saved:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
 /* Button Sizes */
 .btn-sm {
   padding: var(--space-xs) var(--space-sm);
