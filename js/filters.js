@@ -89,3 +89,17 @@ function searchEvents(eventsArray, query) {
     event.category.toLowerCase().includes(searchTerm)
   );
 }
+
+/**
+ * Filters events to show only saved ones
+ * @param {Array} eventsArray - Array of events to filter
+ * @param {boolean} savedOnly - Whether to show only saved events
+ * @returns {Array} Filtered array of events
+ */
+function filterSavedEvents(eventsArray, savedOnly) {
+  if (!savedOnly) {
+    return eventsArray;
+  }
+  
+  return eventsArray.filter(event => event.isSaved);
+}
