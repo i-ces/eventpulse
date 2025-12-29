@@ -4,7 +4,7 @@ A modern, responsive web UI for discovering and tracking events. This is the Sta
 
 ## 📁 Project Structure
 
-```
+```bash
 eventpulse/
 ├── index.html          # Main events listing page
 ├── event.html          # Event details page
@@ -38,6 +38,7 @@ eventpulse/
 ## 🎯 Pages
 
 ### index.html (Events Listing)
+
 - Header with logo, navigation, and auth buttons
 - Sidebar with category, date, and location filters
 - Events grid with 8 sample event cards
@@ -45,6 +46,7 @@ eventpulse/
 - Footer with links
 
 ### event.html (Event Details)
+
 - Hero banner image
 - Event meta information (date, location, organizer)
 - Event description
@@ -53,6 +55,7 @@ eventpulse/
 ## 🧩 CSS Components
 
 ### Buttons
+
 - `.btn` - Base button
 - `.btn-primary` - Primary action
 - `.btn-secondary` - Secondary action
@@ -60,10 +63,12 @@ eventpulse/
 - `.btn-sm`, `.btn-lg` - Size variants
 
 ### Badges
+
 - `.badge` - Base badge
 - `.badge-music`, `.badge-tech`, `.badge-food`, etc. - Category variants
 
 ### Event Cards
+
 - `.event-card` - Card container
 - `.event-card-image` - Image wrapper
 - `.event-card-content` - Content area
@@ -72,6 +77,7 @@ eventpulse/
 - `.event-card-actions` - Action buttons
 
 ### Form Elements
+
 - `.form-input` - Text inputs
 - `.form-select` - Dropdowns
 - `.checkbox-label` - Checkbox with label
