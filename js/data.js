@@ -27,5 +27,16 @@ const events = [
     image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=225&fit=crop",
     description: "Explore cutting-edge technology and innovation with industry leaders.",
     isSaved: false
+  },
+  {
+    id: "evt-003",
+    title: "International Food & Wine Festival",
+    date: "2025-03-20",
+    time: "12:00",
+    location: "Los Angeles",
+    category: "food",
+    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=225&fit=crop",
+    description: "Savor exquisite cuisines and wines from around the world.",
+    isSaved: false
   }
 ];
